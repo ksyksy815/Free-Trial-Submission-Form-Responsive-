@@ -1,0 +1,253 @@
+:root {
+  /*---Primary colors---*/
+  --color-red: hsl(0, 100%, 74%);
+  --color-green: hsl(154, 59%, 51%);
+  /*---Accent colors---*/
+  --color-blue: hsl(248, 32%, 49%);
+  /*---Neutral colors---*/
+  --color-dark-blue: hsl(249, 10%, 26%);
+  --color-grayish-blue: hsl(246, 25%, 77%);
+  /*---Font---*/
+  --font-size: 16px;
+  --font-family: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+input {
+  width: 90%;
+  font-weight: 600;
+  height: 60px;
+  border-radius: 5px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 2em;
+  border: hsl(246, 25%, 77%) solid 1px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: center / contain no-repeat url(./images/bg-intro-desktop.png),
+    hsla(0, 100%, 74%);
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 6%;
+  margin-left: 6%;
+}
+
+.arti {
+  width: 50%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 2em;
+}
+
+.arti h1 {
+  font-size: 3em;
+  margin-bottom: 0.6em;
+  line-height: 1.2em;
+}
+
+.formBox {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trial {
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  color: #fff;
+  font-weight: 400;
+  background-color: var(--color-blue);
+  border-radius: 10px;
+  box-shadow: 0px 10px 0px hsla(249, 10%, 26%, 0.5);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.trial:hover {
+  cursor: pointer;
+  background-color: hsl(248, 59%, 65%);
+}
+
+.trial strong {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.formContainer {
+  min-height: 450px;
+  background-color: #fff;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 0px hsla(249, 10%, 26%, 0.5);
+}
+
+.form {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#submit {
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  border: none;
+  box-shadow: 0px 3px 0px hsl(154, 56%, 36%, 0.5);
+  margin-bottom: 1em;
+  transition: background-color 0.3s ease-in-out;
+}
+#submit:hover {
+  cursor: pointer;
+  font-weight: 700;
+  background-color: hsl(154, 71%, 57%);
+}
+
+#submitAgree {
+  font-size: 12px;
+  color: hsl(246, 25%, 77%);
+  font-weight: 400;
+  text-align: center;
+}
+
+#submitAgree strong {
+  font-size: 12px;
+  color: var(--color-red);
+}
+#submitAgree strong:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.places {
+  width: 90%;
+  color: var(--color-red);
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+  font-weight: 600;
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.termsBG {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(249, 10%, 26%, 0.5);
+  z-index: 100;
+  position: absolute;
+  display: none;
+  place-items: center;
+}
+
+.termsInfo {
+  width: 500px;
+  height: 300px;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2em;
+  box-shadow: 0px 10px 20px hsla(249, 10%, 26%, 0.5);
+}
+
+@media screen and (max-width: 980px) {
+  body {
+    background: center / contain no-repeat url(./images/bg-intro-mobile.png),
+      hsla(0, 100%, 74%);
+  }
+  .container {
+    width: 80%;
+    max-width: 535px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .arti {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 5em 1em;
+  }
+  .arti h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  .formBox {
+    width: 100%;
+  }
+
+  .form {
+    margin-bottom: 1em;
+  }
+  .trial {
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+  .formContainer {
+    width: 100%;
+    min-width: 300px;
+    padding: 0;
+  }
+  input {
+    height: 50px;
+    font-size: 13px;
+    margin: 0.5em;
+  }
+  .termsInfo {
+    width: 70%;
+    height: 70%;
+  }
+
+  footer {
+    margin-top: 2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+}
